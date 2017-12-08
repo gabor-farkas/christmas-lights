@@ -1,0 +1,20 @@
+<html>
+<head>
+  <script src="jquery-1.10.2.js"></script>
+  <script src="picker.js"></script>
+</head>
+<body>
+  <div id="xx">
+  </div>
+  <script>
+  $.colors.pickers.hslCircle.pathToImages = '';
+   $("#xx").hslCircleColorPicker({
+	   color: 'rgb(255,0,0)',
+	   onChange: function(color) {
+		   console.log(color);
+		   $.ajax('rgb?rgb=' + color.color[0] + ',' + color.color[1] + ',' + color.color[2]);
+	   }
+   });
+  </script>
+</body>
+</html>

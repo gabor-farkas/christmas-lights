@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="jquery-1.10.2.js"></script>
+<title>Christmas tree</title>
+</head>
+<body>
+	<h1>Christmas tree</h1>
+	<button id="randomcolors">Random colors</button>
+	<button id="smoothcolors">Smooth</button>
+	<button id="sinecolors">Sines</button>
+	<button id="stopbutton">Stop</button>
+	<script>
+		$("#smoothcolors").click(function () {
+			$.ajax("program?program=smoothcolors");
+		});
+		$("#sinecolors").click(function () {
+			$.ajax("program?program=sinecolors");
+		});
+		$("#randomcolors").click(function () {
+			$.ajax("program?program=randomcolors");
+		});
+		$("#stopbutton").click(function () {
+			$.ajax("program?program=__stop");
+		});
+	</script>
+</body>
+</html>
